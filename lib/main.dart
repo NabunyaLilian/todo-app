@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:todo_app/theme/theme.dart';
+import 'package:todo_app/theme/theme_provider.dart';
 
 import 'home_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+      create: (context) => ThemeProvider(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -12,12 +15,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'TODO',
       darkTheme: darkTheme,
       theme: lightTheme,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      themeMode: themeProvider.themeMode,
+      home: const MyHomePage(title: 'Home'),
     );
   }
 }
