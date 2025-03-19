@@ -32,11 +32,6 @@ class _MyHomePageState extends State<MyHomePage> {
       body: const Center(
         child: Text('Home'),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }

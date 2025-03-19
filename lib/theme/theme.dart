@@ -14,6 +14,10 @@ ThemeData lightTheme = ThemeData(
         bodyMedium: TextStyle(fontSize: 16, color: AppColors.textLight)),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.primary, foregroundColor: Colors.white),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: AppColors.bottomNavBackgroundColor,
+        unselectedItemColor: AppColors.inActiveTab,
+        selectedItemColor: AppColors.activeTab),
     appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.primary, foregroundColor: Colors.white));
 
@@ -30,6 +34,10 @@ ThemeData darkTheme = ThemeData(
         bodyMedium: TextStyle(fontSize: 16, color: AppColors.textDark)),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.primary, foregroundColor: Colors.white),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: AppColors.bottomNavDark,
+        unselectedItemColor: Colors.white,
+        selectedItemColor: AppColors.primary),
     appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.backgroundDark,
         foregroundColor: Colors.white));
