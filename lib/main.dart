@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:todo_app/base_screen.dart';
 import 'package:todo_app/theme/theme.dart';
 import 'package:todo_app/theme/theme_provider.dart';
-
-import 'home_screen.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
       darkTheme: darkTheme,
       theme: lightTheme,
       themeMode: themeProvider.themeMode,
-      home: const MyHomePage(title: 'Home'),
+      home: const BaseScreen(),
     );
   }
 }
